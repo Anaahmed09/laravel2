@@ -9,6 +9,6 @@ class post extends Model
 {
     use HasFactory;
     function authorName (){
-        return $this->hasMany(auther::class,'id','auther_id');
+        return $this->belongsTo(auther::class,'auther_id');
     }
 }

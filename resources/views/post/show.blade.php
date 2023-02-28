@@ -25,26 +25,15 @@
                     <th>Title</th>
                     <th>Posted By</th>
                     <th>Created At</th>
-                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($posts as $post)
+                @foreach($author->getPosts as $post)
                 <tr>
                     <th>{{$post->id}}</th>
                     <td>{{$post->title}}</td>
-                    <td>{{$post->authorName[0]->name}}</td>
+                    <td>{{$post->authorName->name}}</td>
                     <td>{{$post->created_at}}</td>
-                    <td class="d-flex">
-                        <a href="" class="btn btn-secondary me-1">
-                            View
-                        </a>
-                            <button type="submit" class="btn btn-primary me-1">
-                                Edit
-                            </button>
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this post?')"> Destroy
-                            </button>
-                    </td>
                 </tr>
                 @endforeach
             </tbody>

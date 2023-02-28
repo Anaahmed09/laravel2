@@ -32,7 +32,7 @@
                 <tr>
                     <th>{{$post->id}}</th>
                     <td>{{$post->title}}</td>
-                    <td>{{$post->authorName[0]->name}}</td>
+                    <td>{{$post->authorName->name}}</td>
                     <td>{{$post->created_at}}</td>
                 </tr>
                 @endforeach

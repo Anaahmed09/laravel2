@@ -15,7 +15,7 @@ class AutherController extends Controller
     }
     function show($id)
     {
-        $posts = post::where('auther_id', $id)->get();
-        return view('post.show', compact('posts'));
+        $author = auther::find($id);
+        return view('post.show', compact('author'));
     }
 }

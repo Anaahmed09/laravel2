@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class auther extends Model
 {
     use HasFactory;
+    function getPosts()
+    {
+        return $this->hasMany(post::class);
+    }
 }
